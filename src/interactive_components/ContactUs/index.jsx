@@ -44,6 +44,14 @@ const ContactUs = () => {
                             <MapIcon/>
                         </a>
                     </Grid>
+                    <Grid item xs={12} sm={15}>
+                        <Typography variant="h6" align="center" gutterBottom>
+                            Email: info@ecoexplorecr.com
+                        </Typography>
+                        <Typography variant="h6" align="center" gutterBottom>
+                            Tel: +506 63507316
+                        </Typography>
+                    </Grid>
                     {/*<Grid item xs={12} sm={3}>*/}
                     {/*    <a href="https://www.instagram.com/ecoexplorecr/">*/}
                     {/*        <CallIcon/>*/}
