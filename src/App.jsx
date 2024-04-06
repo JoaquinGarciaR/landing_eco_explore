@@ -8,6 +8,8 @@ import './App.css'
 
 import TourReservationForm from "./interactive_components/TourReservationForm/index.jsx";
 import Copyright from "./interactive_components/Copyright/index.jsx";
+import {Typography} from "@mui/material";
+import ContactUs from "./interactive_components/ContactUs/index.jsx";
 
 function App() {
     // const [count, setCount] = useState(0)
@@ -17,15 +19,17 @@ function App() {
         <>
             <div>
                 <a href="#" target="_blank">
-                    <img src={ecoExploreLogo} className="logo" alt="Vite logo"/>
+                    <img src={ecoExploreLogo} className="logo" alt="Eco Explore Caño Negro Costa Rica"/>
                 </a>
                 {/*<a href="https://react.dev" target="_blank">*/}
                 {/*  <img src={reactLogo} className="logo react" alt="React logo" />*/}
                 {/*</a>*/}
             </div>
             <h1 className="h1 animacion">EcoExplore Caño Negro Costa Rica</h1>
+            <Typography className="h1 animacion" variant="h2" align="center" gutterBottom>Caño Negro</Typography>
             <TourReservationForm/>
-            <p></p>
+            <ContactUs/>
+            {/*<Typography className="h1 animacion" variant="h2" align="center">Contactos</Typography>*/}
             <Copyright/>
             {/*<div className="card">*/}
             {/*  <button onClick={() => setCount((count) => count + 1)}>*/}

@@ -20,6 +20,7 @@ const TourReservationForm = () => {
         phoneNumber: '',
         numberOfPeople: '',
         tourDate: '',
+        tourTime: '',
         category: '',
         additionalInfo: '',
     });
@@ -74,7 +75,7 @@ const TourReservationForm = () => {
     return (
         <Container>
             <Typography variant="h4" align="center" gutterBottom>
-                Reserva tu aventura en el Refugio de Vida Silvestre Caño Negro
+                Reserva tu aventura en el Refugio de Vida Silvestre Mixto Caño Negro
             </Typography>
             <Paper style={{ padding: 20, borderRadius: 20, backgroundColor: 'rgba(255, 255, 255, 0.8)' }}>
                 <form onSubmit={handleSubmit}>
@@ -130,17 +131,18 @@ const TourReservationForm = () => {
                                     onChange={handleChange}
                                     required
                                 >
-                                    <MenuItem value="Varios">Personalizado</MenuItem>
-                                    <MenuItem value="Tour en bote">Hospedaje</MenuItem>
-                                    <MenuItem value="Tour en bote">Tour Acuatico</MenuItem>
-                                    <MenuItem value="Paseo a caballo">Paseo a Caballo</MenuItem>
-                                    <MenuItem value="Caminata nocturna">Caminata Nocturna</MenuItem>
+                                    <MenuItem value="Personalizado">Personalizado</MenuItem>
+                                    <MenuItem value="Tour Acuático">Tour Acuático</MenuItem>
+                                    <MenuItem value="Paseo a Caballo">Paseo a Caballo</MenuItem>
+                                    <MenuItem value="Caminata Nocturna">Caminata Nocturna</MenuItem>
                                     <MenuItem value="Senderos">Senderos</MenuItem>
-                                    <MenuItem value="Finca tour cacao">Tour Cacao</MenuItem>
+                                    <MenuItem value="Hospedaje">Hospedaje</MenuItem>
+                                    <MenuItem value="Tour Cacao">Tour Cacao</MenuItem>
                                 </Select>
                             </FormControl>
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+
+                        <Grid item xs={12} sm={3}>
                             <TextField
                                 fullWidth
                                 label="Fecha del tour"
@@ -148,6 +150,19 @@ const TourReservationForm = () => {
                                 type="date"
                                 InputLabelProps={{ shrink: true }}
                                 value={formData.tourDate}
+                                onChange={handleChange}
+                                required
+                            />
+                        </Grid>
+                        <Grid item xs={12} sm={3}>
+                            <TextField
+                                fullWidth
+                                label="Hora del tour"
+                                name="tourTime"
+                                type="time"
+                                InputLabelProps={{ shrink: true }}
+                                inputProps={{ step: 300 }} // Step de 5 minutos
+                                value={formData.tourTime}
                                 onChange={handleChange}
                                 required
                             />
