@@ -3,7 +3,7 @@ import axios from 'axios';
 
 // import reactLogo from './assets/react.svg'
 import ecoExploreLogo from './assets/Logo.png'
-// import viteLogo from '/vite.svg'
+
 import './App.css'
 
 import TourReservationForm from "./interactive_components/TourReservationForm/index.jsx";
@@ -25,8 +25,8 @@ function App() {
                 {/*  <img src={reactLogo} className="logo react" alt="React logo" />*/}
                 {/*</a>*/}
             </div>
-            <h1 className="h1 animacion">EcoExplore Caño Negro Costa Rica</h1>
-            <Typography className="h1 animacion" variant="h2" align="center" gutterBottom>Caño Negro</Typography>
+            <h1 className="h1 animacion"><strong> EcoExplore Caño Negro Costa Rica</strong></h1>
+            <Typography className="h1 animacion" variant="h2" align="center" gutterBottom><strong> Caño Negro </strong></Typography>
             <TourReservationForm/>
             <ContactUs/>
             {/*<Typography className="h1 animacion" variant="h2" align="center">Contactos</Typography>*/}

@@ -12,6 +12,7 @@ import {
     MenuItem
 } from '@mui/material';
 import axios from "axios";
+import toast from "react-hot-toast";
 
 const TourReservationForm = () => {
     const [formData, setFormData] = useState({
@@ -24,6 +25,8 @@ const TourReservationForm = () => {
         category: '',
         additionalInfo: '',
     });
+
+    const [open,setOpen] = useState(false)
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -64,18 +67,32 @@ const TourReservationForm = () => {
             .then(response => {
                 // Manejar la respuesta del servidor
                 console.log('La solicitud:',response.data);
+                toast.success('Pronto de Contactaremos')
             })
             .catch(error => {
                 // Manejar errores
                 console.error('Error al realizar la solicitud:', error);
                 console.error(error);
-            });
+                toast.error('Ha ocurrido un error')
+            }).finally(() =>{
+                setFormData({
+                    name: '',
+                    email: '',
+                    phoneNumber: '',
+                    numberOfPeople: '',
+                    tourDate: '',
+                    tourTime: '',
+                    category: '',
+                    additionalInfo: '',
+                })
+            }
+        );
     };
 
     return (
         <Container>
             <Typography variant="h4" align="center" gutterBottom>
-                Reserva tu aventura en el Refugio de Vida Silvestre Mixto Caño Negro
+                Reserva tu aventura en el <strong> Refugio de Vida Silvestre Mixto </strong> <strong> Caño Negro </strong>
             </Typography>
             <Paper style={{ padding: 20, borderRadius: 20, backgroundColor: 'rgba(255, 255, 255, 0.8)' }}>
                 <form onSubmit={handleSubmit}>

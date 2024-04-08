@@ -28,28 +28,38 @@ const ContactUs = () => {
             <Paper style={{ padding: 20, borderRadius: 20, backgroundColor: 'rgba(255, 255, 255, 0.8)' }}>
                 <Grid container spacing={2} display={"flex"}
                 justify-content= {"center"}>
-                    <Grid item xs={12} sm={4}>
+                    <Grid item xs={12} sm={3}>
                         <a href="https://wa.me/50663507316">
-                            <WhatsAppIcon/>
+                            <img width="48" height="48" src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="Caño Negro Whatsapp Link"/>
                         </a>
                     </Grid>
-                    <Grid item xs={12} sm={4}>
-                        {/*https://www.tiktok.com/@ecoexplorecr*/}
-                        <a href="https://www.instagram.com/ecoexplorecr/">
-                            <InstagramIcon/>
+                    <Grid item xs={12} sm={3}>
+                        <a target="_blank" href="https://www.instagram.com/ecoexplorecr/">
+                            <img width="48" height="48" src="https://img.icons8.com/fluency/48/instagram-new.png" alt="Caño Negro Instagram Link"/>
                         </a>
                     </Grid>
-                    <Grid item xs={12} sm={4}>
+                    <Grid item xs={12} sm={3}>
+                        <a href="https://www.tiktok.com/@ecoexplorecr">
+                            <img width="48" height="48" src="https://img.icons8.com/color/48/tiktok--v1.png" alt="Caño Negro sTiktok Link"/>
+                        </a>
+                    </Grid>
+                    <Grid item xs={12} sm={3}>
                         <a href="https://maps.app.goo.gl/ctYCXPFaGz3pMbSSA">
-                            <MapIcon/>
+                            <img width="48" height="48" src="https://img.icons8.com/fluency/48/maps.png" alt="Caño Negro Maps Link"/>
                         </a>
                     </Grid>
                     <Grid item xs={12} sm={15}>
-                        <Typography variant="h6" align="center" gutterBottom>
-                            Email: info@ecoexplorecr.com
+                        <Typography variant="p" align="center" gutterBottom> Somos una empresa orgullosa del <strong> turismo </strong>  en el <strong> Refugio de Vida Silvestre Mixto Caño Negro </strong> </Typography>
+                    </Grid>
+                    <Grid item xs={12} sm={15}>
+                        <Typography variant="p" align="center" gutterBottom>
+                            Email:
+                            <strong> info@ecoexplorecr.com</strong>
                         </Typography>
-                        <Typography variant="h6" align="center" gutterBottom>
-                            Tel: +506 63507316
+                    </Grid>
+                    <Grid item xs={12} sm={15}>
+                        <Typography variant="p" align="center" gutterBottom>
+                            Tel: <strong> +506 63507316 </strong>
                         </Typography>
                     </Grid>
                     {/*<Grid item xs={12} sm={3}>*/}
