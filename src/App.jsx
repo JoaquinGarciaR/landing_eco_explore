@@ -11,6 +11,31 @@ import Copyright from "./interactive_components/Copyright/index.jsx";
 import {Typography} from "@mui/material";
 import ContactUs from "./interactive_components/ContactUs/index.jsx";
 
+
+document.addEventListener("DOMContentLoaded", function() {
+    const toggleButton = document.getElementById('toggleButton');
+    const inicio = document.getElementById('inicio');
+    const titlesBlog = document.getElementById('titles-blog');
+    const blogContent = document.getElementById('blog-content');
+    const root = document.getElementById('root');
+
+    toggleButton.addEventListener('click', function() {
+        inicio.classList.toggle('active');
+        toggleButton.classList.toggle('active');
+        blogContent.style.display = (blogContent.style.display === 'none') ? 'block' : 'none';
+        titlesBlog.style.display = (titlesBlog.style.display === 'none') ? 'flex' : 'none';
+        root.style.display = (root.style.display === 'none') ? 'block' : 'none';
+
+    });
+    inicio.addEventListener('click', function() {
+        inicio.classList.toggle('active');
+        toggleButton.classList.toggle('active');
+        blogContent.style.display = (blogContent.style.display === 'none') ? 'block' : 'none';
+        titlesBlog.style.display = (titlesBlog.style.display === 'none') ? 'flex' : 'none';
+        root.style.display = (root.style.display === 'none') ? 'block' : 'none';
+    });
+});
+
 function App() {
     // const [count, setCount] = useState(0)
 
